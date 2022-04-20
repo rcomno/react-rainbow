@@ -1,18 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
 import React, { useState } from 'react'
-import ColorBlock from './ColorBlock'
+import ColorBlock from './ColorBlock.js'
 
 function App() {
-  let colors = ['violet', 'blue', 'lightblue', 'green', 'greenyellow', 'yellow', 'orange', 'red']
+  let colors = [colors, setColors] = useState(['violet', 'blue', 'lightblue', 'green', 'greenyellow', 'yellow', 'orange', 'red'])
   let colorMap = colors.map((color, i) => {
-    return (<ColorBlock color={color} />)
+    return (
+      <ColorBlock color={color} key={i} />
+    )
   })
   return (
-    <div className="App">
-      {colors.map((color, i) => <ColorBlock key= color={color}/>)}
-    </div>
-  );
+    <div className="App">{colorMap}</div>
+  )
 }
 
 export default App;
