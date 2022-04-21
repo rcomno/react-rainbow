@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import ColorBlock from './ColorBlock.js'
+import ColorForm from './ColorForm.js'
 
 function App() {
   let colors = [colors, setColors] = useState(['violet', 'blue', 'lightblue', 'green', 'greenyellow', 'yellow', 'orange', 'red'])
